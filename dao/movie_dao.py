@@ -1,7 +1,7 @@
 from .model.movie import Movie
 
 class MovieDao:
-    def __int__(self, session):
+    def __init__(self, session):
         self.session = session
 
     def get_all(self):
@@ -13,13 +13,13 @@ class MovieDao:
         return movie
 
     def get_by_director_id(self, did):
-        return self.session.query(Movie).filter(Movie.director_id == did).all
+        return self.session.query(Movie).filter(Movie.director_id == did).all()
 
     def get_by_genre_id(self, gid):
-        return self.session.query(Movie).filter(Movie.genre_id == gid).all
+        return self.session.query(Movie).filter(Movie.genre_id == gid).all()
 
     def get_by_year(self, year):
-        return self.session.query(Movie).filter(Movie.year == year).all
+        return self.session.query(Movie).filter(Movie.year == year).all()
 
     def create(self, data):
         new_movie = Movie(**data)

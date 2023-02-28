@@ -1,7 +1,7 @@
 from dao.movie_dao import MovieDao
 
 class MovieServoce:
-    def __int__(self, dao: MovieDao):
+    def __init__(self, dao: MovieDao):
         self.dao = dao
 
     def get_one(self, mid):

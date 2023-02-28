@@ -26,7 +26,7 @@ def register_extensions(app):
      api.add_namespace(directors_ns)
 
      with app.app_context():
-          db.create_all
+          db.create_all()
 
 app = create_app(Config())
 

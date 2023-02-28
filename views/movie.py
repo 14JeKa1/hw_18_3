@@ -28,7 +28,7 @@ class MoviesView(Resource):
 class MovieView(Resource):
     def get(self, mid):
         movie = movie_service.get_one(mid)
-        return movies_schema.dump(movie), 200
+        return movie_schema.dump(movie), 200
 
     def put(self, mid):
         data = request.json
