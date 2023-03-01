@@ -1,7 +1,7 @@
 from dao.genre_dao import GenreDao
 
 class GenreService:
-    def __int__(self, dao: GenreDao):
+    def __init__(self, dao: GenreDao):
         self.dao = dao
 
     def get_all(self):

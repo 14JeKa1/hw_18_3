@@ -33,7 +33,7 @@ class MovieView(Resource):
     def put(self, mid):
         data = request.json
         data['id'] = mid
-        movie_service.update(data)
+        movie_service.get_update(data)
         return 'updated', 204
 
     def delete(self, mid):

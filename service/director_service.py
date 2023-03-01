@@ -1,7 +1,7 @@
 from dao.director_dao import DirectorDao
 
 class DirectorService:
-    def __int__(self, dao: DirectorDao):
+    def __init__(self, dao: DirectorDao):
         self.dao = dao
 
     def get_all(self):
